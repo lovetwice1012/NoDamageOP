@@ -34,6 +34,7 @@ class Main extends PluginBase implements Listener {
         $player->setFood(20);
         $player->teleport($player->getLevel()->getSafeSpawn());
     }
+	    echo "test".PHP_EOL;
 }
 
 
