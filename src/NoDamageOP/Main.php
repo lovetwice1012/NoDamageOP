@@ -24,10 +24,8 @@ class Main extends PluginBase implements Listener {
 
 	public function onEnable()
 	{
-		  $this->getLogger()->info(Color::AQUA . "FastRespawn Enabled By @Khavmc");
-    $this->getServer()->getPluginManager()->registerEvents($this ,$this);
-    $this->saveDefaultConfig();
-    $this->reloadConfig();
+		  $this->getLogger()->info(Color::AQUA . "NoDamageOP Enabled By @lovetwice1012");
+  
         }
 
     public function onMove(PlayerMoveEvent $event)
