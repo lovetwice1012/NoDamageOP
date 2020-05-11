@@ -26,15 +26,15 @@ class Main extends PluginBase implements Listener {
         }
     public function onMove(PlayerMoveEvent $event): void {
     $player = $event->getPlayer();
-    //if(!$player->isOp())
-      //  return;
-
+    if(!$player->isOp()){
+        return;
+    }
     if($player->y < 0) {
         $player->setHealth(20);
         $player->setFood(20);
         $player->teleport($player->getLevel()->getSafeSpawn());
     }
-	    echo "test".PHP_EOL;
+	    
 }
 
 
@@ -42,9 +42,9 @@ class Main extends PluginBase implements Listener {
         function onDamage(EntityDamageEvent $event)
         {
                     $player = $event->getEntity();
-			//if(!$player->isOp()){
-                        //return;
-	                //}
+			if(!$player->isOp()){
+                        return;
+	                }
                         $event->setCancelled();
                         $player->setHealth(20);
                         $player->setFood(20);
