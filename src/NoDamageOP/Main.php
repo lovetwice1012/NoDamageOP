@@ -22,7 +22,7 @@ class Main extends PluginBase implements Listener {
 	public function onEnable()
 	{
 		  $this->getLogger()->info(Color::AQUA . "NoDamageOP Enabled By @lovetwice1012");
- 
+                   $this->getServer()->getPluginManager()->registerEvents($this ,$this);
         }
     public function onMove(PlayerMoveEvent $event): void {
     $player = $event->getPlayer();
