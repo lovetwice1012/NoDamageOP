@@ -29,7 +29,6 @@ class Main extends PluginBase implements Listener {
     {
         $player = $event->getPlayer();
 	if($player->isOp()){
-        $playerN = $player->getName();
         if ($event->getPlayer()->getY() < -1) {
             $event->getPlayer()->teleport($event->getPlayer()->getLevel()->getSafeSpawn());
             $player->setHealth(20);
