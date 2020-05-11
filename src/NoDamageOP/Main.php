@@ -8,15 +8,12 @@ use pocketmine\utils\TextFormat as Color;
 use pocketmine\Player;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\level\Position;
-use pocketmine\utils\Config;
 use pocketmine\item\Item;
-use pocketmine\inventory\InventoryBase;
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
-use pocketmine\entity\Effect;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\player\PlayerMoveEvent;
-use onebone\economyapi\EconomyAPI;
+
 
 class Main extends PluginBase implements Listener {
 
