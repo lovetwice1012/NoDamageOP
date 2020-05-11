@@ -1,6 +1,6 @@
 <?php
 
-namespace FastRespawn;
+namespace NoDamageOP;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -44,7 +44,6 @@ class Main extends PluginBase implements Listener {
         }
     }
 
-// Thx For CraftYourBukkit To Give Me The Code!
 
         public
         function onDamage(EntityDamageEvent $event)
