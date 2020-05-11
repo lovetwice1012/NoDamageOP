@@ -28,8 +28,9 @@ class Main extends PluginBase implements Listener {
     public function onMove(PlayerMoveEvent $event)
     {
         $player = $event->getPlayer();
-	if($player->isOp()){
+	
         if ($event->getPlayer()->getY() < -1) {
+        if ($player->isOp()) {
             $event->getPlayer()->teleport($event->getPlayer()->getLevel()->getSafeSpawn());
             $player->setHealth(20);
             $player->setFood(20);
@@ -42,7 +43,6 @@ class Main extends PluginBase implements Listener {
         public
         function onDamage(EntityDamageEvent $event)
         {
-            if ($event instanceof EntityDamageByEntityEvent) {
 
 		
                     $player = $event->getEntity();
@@ -54,6 +54,6 @@ class Main extends PluginBase implements Listener {
 
                         }
                     
-                }
+                
          }
  }
