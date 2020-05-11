@@ -29,7 +29,7 @@ class Main extends PluginBase implements Listener {
     //if(!$player->isOp())
       //  return;
 
-    if($player->y < -1) {
+    if($player->y < 0) {
         $player->setHealth(20);
         $player->setFood(20);
         $player->teleport($player->getLevel()->getSafeSpawn());
