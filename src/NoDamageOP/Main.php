@@ -24,18 +24,17 @@ class Main extends PluginBase implements Listener {
 		  $this->getLogger()->info(Color::AQUA . "NoDamageOP Enabled By @lovetwice1012");
  
         }
-    public function onMove(PlayerMoveEvent $event)
-    {
-        $player = $event->getPlayer();
-        if ($event->getPlayer()->getY() < -1) {
-            if(!$player->isOp()){
-            return;
-	    }
-            $event->getPlayer()->teleport($event->getPlayer()->getLevel()->getSafeSpawn());
-            $player->setHealth(20);
-            $player->setFood(20);
-        }
+    public function onMove(PlayerMoveEvent $event): void {
+    $player = $event->getPlayer();
+    if(!$player->isOp())
+        return;
+
+    if($player->y < -1) {
+        $player->setHealth(20);
+        $player->setFood(20);
+        $player->teleport($player->getLevel()->getSafeSpawn());
     }
+}
 
 
         public
