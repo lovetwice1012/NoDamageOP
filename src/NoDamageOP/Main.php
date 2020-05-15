@@ -13,7 +13,7 @@ use pocketmine\level\Level;
 use pocketmine\math\Vector3;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\player\PlayerMoveEvent;
-
+use pocketmine\event\entity\EntityEffectAddEvent;
 
 class Main extends PluginBase implements Listener {
 
