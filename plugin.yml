@@ -1,6 +1,6 @@
 name: NoDamageOP
 main: NoDamageOP\Main
 author: Lovetwice1012
-version: 1.0.0
+version: 2.0.0
 api: [3.0.0]
 description: OPは全てのダメージを受けません！
