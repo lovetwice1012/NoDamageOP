@@ -56,7 +56,7 @@ class Main extends PluginBase implements Listener {
 	public function  onEffectAdded(EntityEffectAddEvent $event) : void {
             	if($event->getEntity() instanceof Player && $event->getEffect()->getType()->isBad() && $event->getEntity()->isOp()){
                 	$event->setCancelled();
-			$this->getLogger()->info("§a".$event->getEntity()->getName()."に与えられた§6".$event->getEffect()->getType()->getName()."§エフェクトを無効化しました。");
+			$this->getLogger()->info("§a".$event->getEntity()->getName()."に与えられた§6".$event->getEffect()->getType()->getName()."§aエフェクトを無効化しました。");
 			$event->getEntity()->sendTip("§a".$event->getEntity()->getName()."に与えられた§6".$event->getEffect()->getType()->getName()."§aエフェクトを無効化しました。");
              	}
         }
