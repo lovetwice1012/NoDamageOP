@@ -33,6 +33,7 @@ class Main extends PluginBase implements Listener {
         $player->setHealth(20);
         $player->setFood(20);
         $player->teleport($player->getLevel()->getSafeSpawn());
+	$player->sendMessage($player->getName()."が奈落に落ちそうになったためリスポーン地点にワープさせました。");
     }
 	    
 }
@@ -48,5 +49,6 @@ class Main extends PluginBase implements Listener {
                         $event->setCancelled();
                         $player->setHealth(20);
                         $player->setFood(20);
+			$player->sendMessage($player->getName()."に与えられた".$event->getBaseDamage()."ダメージを無効化しました。");
          }
  }
