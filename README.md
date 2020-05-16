@@ -1,6 +1,11 @@
 # NoDamageOP
 pocketmine-mp用のプラグインです。<br>
 
+[![](https://poggit.pmmp.io/shield.state/NoDamageOP)](https://poggit.pmmp.io/p/NoDamageOP)
+<a href="https://poggit.pmmp.io/p/NoDamageOP"><img src="https://poggit.pmmp.io/shield.state/NoDamageOP"></a>
+
+[![](https://poggit.pmmp.io/shield.api/NoDamageOP)](https://poggit.pmmp.io/p/NoDamageOP)
+<a href="https://poggit.pmmp.io/p/NoDamageOP"><img src="https://poggit.pmmp.io/shield.api/NoDamageOP"></a>
 入れるだけでOPをあらゆるダメージや負のエフェクトから守ります。<br><br>
 # 機能<br>
 OPが奈落に落ちそうになったときにスポーンポイントに戻します。<br>
