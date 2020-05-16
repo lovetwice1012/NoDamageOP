@@ -43,15 +43,18 @@ class Main extends PluginBase implements Listener {
         public function onDamage(EntityDamageEvent $event){
             	$player = $event->getEntity();
 		if($event->getEntity() instanceof Player){
-            	if(!$player->isOp()){
-                	return;
-	    	}
-            	$event->setCancelled();
-            	$player->setHealth(20);
-            	$player->setFood(20);
-	    	$this->getLogger()->info("§a".$player->getName()."に与えられた§6".$event->getBaseDamage()."§aダメージを無効化しました。");
-            	$player->sendTip("§a".$player->getName()."に与えられた§6".$event->getBaseDamage()."§aダメージを無効化しました。");
-                }
+            		if(!$player->isOp()){
+                		return;
+	    		}
+            		$event->setCancelled();
+            		$player->setHealth(20);
+            		$player->setFood(20);
+			if($event->getFinalDamage() > 0){
+	    			$this->getLogger()->info("§a".$player->getName()."に与えられた§6".$event->getFinalDamage()."§aダメージを無効化しました。");
+            			$player->sendTip("§a".$player->getName()."に与えられた§6".$event->getFinalDamage()."§aダメージを無効化しました。");
+			}
+		}
+			
 	}
 	
 	
