@@ -50,8 +50,8 @@ class Main extends PluginBase implements Listener {
             		$player->setHealth(20);
             		$player->setFood(20);
 			if($event->getFinalDamage() > 0){
-	    			$this->getLogger()->info("§a".$player->getName()."に与えられた§6".$event->getFinalDamage()."§aダメージを無効化しました。");
-            			$player->sendTip("§a".$player->getName()."に与えられた§6".$event->getFinalDamage()."§aダメージを無効化しました。");
+	    			$this->getLogger()->info("§aDisabled §6".$event->getFinalDamage()."§a damage received by ".$player->getName());
+            			$player->sendTip("§aDisabled §6".$event->getFinalDamage()."§a damage received by ".$player->getName());
 			}
 		}
 			
@@ -61,8 +61,8 @@ class Main extends PluginBase implements Listener {
 	public function  onEffectAdded(EntityEffectAddEvent $event) : void {
             	if($event->getEntity() instanceof Player && $event->getEffect()->getType()->isBad() && $event->getEntity()->isOp()){
                 	$event->setCancelled();
-			$this->getLogger()->info("§a".$event->getEntity()->getName()."に与えられた§6".$event->getEffect()->getType()->getName()."§aエフェクトを無効化しました。");
-			$event->getEntity()->sendTip("§a".$event->getEntity()->getName()."に与えられた§6".$event->getEffect()->getType()->getName()."§aエフェクトを無効化しました。");
+			$this->getLogger()->info("§aDisabled §6".$event->getFinalDamage()."§a effect received by ".$player->getName());
+			$event->getEntity()->sendTip("§aDisabled §6".$event->getFinalDamage()."§a effect received by ".$player->getName());
              	}
         }
  }
