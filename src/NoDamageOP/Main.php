@@ -34,8 +34,8 @@ class Main extends PluginBase implements Listener {
                 	$player->setHealth(20);
                 	$player->setFood(20);
                		$player->teleport($player->getLevel()->getSafeSpawn());
-    	        	$this->getLogger()->info("§a".$player->getName()."が奈落に落ちそうになったためリスポーン地点にワープさせました。");
-	        	$player->sendTip("§a".$player->getName()."が奈落に落ちそうになったためリスポーン地点にワープさせました。");
+    	        	$this->getLogger()->info("§aBecause ".$player->getName()." was about to fall into the abyss, I warped the respawn spot.");
+	        	$player->sendTip("§aBecause ".$player->getName()." was about to fall into the abyss, I warped the respawn spot.");
             	}
         }
 
